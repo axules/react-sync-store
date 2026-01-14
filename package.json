@@ -16,7 +16,7 @@
   "scripts": {
     "test": "jest",
     "eslint": "eslint ./src --ext=js,jsx",
-    "build": "npm run eslint && npm test && babel -d dist ./src/index.js"
+    "build": "cross-env NODE_ENV=production npm run eslint && npm test && babel -d dist ./src/index.js"
   },
   "keywords": [
     "react",
@@ -41,6 +41,7 @@
     "@babel/preset-env": "^7.28.5",
     "babel-jest": "^30.2.0",
     "core-js": "^3.47.0",
+    "cross-env": "^10.1.0",
     "eslint": "^8.2.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-es": "^4.1.0",
